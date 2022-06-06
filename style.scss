@@ -1,0 +1,493 @@
+$bg-light: #fff;
+$color-light: rgb(189, 193, 198);
+$bg-dark: rgb(32, 33, 36);
+$color-dark: black;
+$top-footer-bg-color: #16181a;
+$link-color: rgb(189, 193, 198);
+$top-menu-color: #fff;
+$btn-theme-color: #717171;
+$link-hover-color: #de7b85;
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: $bg-dark;
+        color: $color-light;
+
+        a {
+            color: $link-color;
+        }
+
+        #switch-theme{
+            &:checked {
+                ~header, ~nav, ~main {
+                    background-color: $bg-light;
+                    color: $color-dark;
+
+                    form input, #form input {
+                        color: $color-dark;
+                        &::placeholder{
+                            color: $btn-theme-color;
+                        }
+                    }
+
+                    .btn, #form .btn {
+                        color: $color-light;
+                    }
+                    
+                    a {
+                        color: inherit;
+                        &:hover {
+                            color: $link-hover-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: $bg-light;
+
+        form input, #form input {
+            color: $color-dark !important;
+            &.btn {
+                color: $link-color !important;
+                &:hover {
+                    color: $link-hover-color !important;
+                }
+            }
+        }
+
+        a {
+            color: $color-dark;
+        }
+
+        footer, .top-menu {
+            color: $color-light;
+            a {
+                color: $color-light;
+            }
+        }
+
+        #switch-theme{
+            &:checked {
+                ~header, ~nav, ~main {
+                    background-color: $bg-dark;
+                    color: $color-light;  
+                    
+                    form input, #form input {
+                        color: $color-light !important;
+                    }
+                    
+                    .btn, #form .btn{
+                        color: $color-light;
+                    }
+                    
+                    a {
+                        color: inherit;
+                        &:hover {
+                            color: $link-hover-color !important;
+                        }
+                    }
+                }           
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", helvetica, arial, sans-serif;;
+    font-weight: 400;
+    transition: 500ms linear;
+
+    header, nav, main, footer {
+        transition: background-color 500ms linear, color 500ms linear;
+    }
+    
+    #switch-theme{
+        display: none;
+    }
+    
+    .container {
+        margin: auto;
+        padding: 10px 15px;
+    }
+
+    p {
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        &:hover {
+            color: $link-hover-color;
+        }
+    }
+
+    .select {
+        background-color: $link-hover-color;
+        display: inline;
+    }
+    .underline {
+        text-decoration: underline;
+    }
+    .trough {
+        text-decoration: line-through;
+    }
+    .bold {
+        font-weight: 600;
+    }
+    .italic {
+        font-style: italic;
+    }
+
+    .pointer {
+        cursor: pointer;
+    }
+    
+    .text {
+        cursor: text;
+    }
+
+    .progress {
+        cursor: progress;
+    }
+
+    .wait {
+        cursor: wait;
+    }
+
+    .grab {
+        cursor: grab;
+    }
+
+    .zoom-in {
+        cursor: zoom-in;
+    }
+
+    .zoom-out {
+        cursor: zoom-out;
+    }
+
+    .none {
+        cursor: none;
+    }
+
+    .btn {
+        border: 1px solid $btn-theme-color;
+        background-color: $bg-dark;
+        color: $color-light;
+        
+        &:hover {
+            border-color: $link-hover-color;
+            color: $link-hover-color;
+        }
+
+        &:active {
+            background-color: black !important;
+        }
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .navi {
+        li {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .top-menu {
+        background-color: $top-footer-bg-color;
+        color: $top-menu-color;
+        
+        .flex {
+            justify-content: space-between;
+            a {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    .logo {
+        justify-content: center;
+
+        a {
+            padding: 10px;
+        }
+
+        img {
+            max-height: 150px;
+        }
+    }
+
+    nav {
+        .flex { 
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .navi {            
+            li {
+                display: inline-block;
+            }
+
+            a {
+                padding: 10px 15px;
+            }
+        }
+
+        #switch-btn {
+            border: 1px solid black;
+            background-color: $btn-theme-color;
+            border-radius: 0;
+            padding: 5px 10px;
+            display: block;
+            &:hover {
+                border-color: $link-hover-color;
+                color: $link-hover-color;
+            }
+        }
+
+        .breadcrumbs {
+            margin: 15px 0;
+            padding: 15px 0;       
+            width: 100%;  
+
+            a {
+                margin-right: 15px;
+                
+                &::before{
+                    content: '→';
+                    margin-right: 15px;
+                    color: $link-color;
+                }
+    
+                &:first-child::before {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    main {
+        .flex {
+            flex-wrap: wrap;  
+        }
+
+        a {
+            &:visited {
+                color: #c58af9;
+            }
+        }
+
+        .article {
+            width: 70%;
+
+            .part {
+                border: 1px solid gray;
+                padding: 15px;
+                margin: 0 15px 15px 0;
+            }
+
+            code {
+                font-weight: 600;
+                font-size: 1.2em;
+                padding: 0 15px;
+                display: block;
+                background-color: $btn-theme-color;
+                overflow: auto;
+            }
+
+            .white-space {
+                white-space: pre;
+            }
+
+            #form {              
+
+                form {
+                    margin: 0 auto;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    align-content: flex-start;
+                    display: block;
+                    width: 350px;
+
+                    .buttons {
+                        justify-content: space-between;
+                    }
+
+                    input {
+                        box-sizing: border-box;
+                        border-radius: 0;
+                        width: 100%;
+                        margin: 15px 0;
+                        padding: 15px;
+                        background-color: inherit;
+                        color: $top-menu-color;
+                        border: 1px solid $btn-theme-color;
+
+                        &:focus-visible {
+                            border-radius: 0px;
+                        }
+
+                        &[type=checkbox] {
+                            width: 9%;
+                            + label {
+                                display: inline-block;
+                                width: 89%;
+                            }
+                        }                     
+
+                        &.btn {
+                            background-color: $bg-dark;
+                            color: $color-light;
+                            max-width: 100px;
+
+                            &:hover {
+                                border-color: $link-hover-color;
+                                color: $link-hover-color;
+                            }
+
+                            &:active {
+                                background-color: rgb(21, 21, 21);
+                            }
+                        }
+
+                        
+                    }
+                }
+            }
+
+            #table {
+                table {
+                    margin: auto;
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    border: 1px solid $btn-theme-color;
+                
+                    td { 
+                        padding: 15px;
+                        text-align: center;
+                        border: 1px solid $btn-theme-color;                       
+                    }
+                }
+            }
+        } 
+    
+        aside {
+            width: 30%;
+            form {
+                input {
+                    border-radius: 0;
+                    margin-right: 5px;
+                    margin-bottom: 5px;
+
+                    &[type=text]{
+                        color: $top-menu-color;
+                        flex-grow: 3;
+                        padding: 15px;
+                        border: 1px solid $btn-theme-color;
+                        background-color: inherit;
+                    }
+                    &[type=submit]{
+                        flex-grow: 1;
+                        
+                    }
+                }
+            }
+
+            .about {
+                h3 {
+                    text-align: left;
+
+                    &::after {
+                        content: '⎯⎯⎯';
+                        margin-left: 15px;
+                        color: $link-hover-color;
+                    }
+                }
+
+                img {
+                    max-width: 100%;
+                }
+
+                h4 {
+                    text-align: center;
+                }
+                p {
+                    text-align: center;
+                }
+            }       
+        }
+    }
+    footer {
+        background-color: $top-footer-bg-color;
+
+        .footer {
+            flex-wrap: wrap;
+            width: 100%;
+            
+            ul li {
+                list-style-type: none;
+            }
+
+            .links {
+            display: inline-block;
+            width: 50%;
+            }
+            &:last-child {
+                padding-bottom: 50px;
+            }
+        }
+        .contact {
+            display: inline-block;
+            width: 50%;
+        }
+
+        hr{
+            width: 100%;
+        }
+
+    }
+        
+}
+
+

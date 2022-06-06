@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Schoolstrap example</title>
+</head>
+<body>
+    <input type="checkbox" id="switch-theme">
+    <header>
+        <div class="top-menu">
+            <div class="container flex">
+                <div>
+                    <a href="#">Support</a>
+                    <a href="#">Documentation</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div>
+                    <a class="align-right" href="tel:(123)4567890">&#9742; +380(11)456-7890</a>
+                    <a class="align-right" href="mailto:example@mail.com">&#9993; example@mail.com</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="container logo flex">
+            <a href="/"><img src="./img/logo.png" alt="logo"></a>
+        </div>
+    </header>
+    <nav>
+        <div class="container flex">
+            <div class="social">
+                <a href="#">Our social</a>
+            </div>
+            <ul class="navi">
+                <li><a href="#">Home</a></li>
+                <li><a href="#headers">Headers</a></li>
+                <li><a href="#texts">Differenet text</a></li>
+                <li><a href="#lists">Lists</a></li>
+                <li><a href="#code">Code</a></li>
+                <li><a href="#form">Form</a></li>
+                <li><a href="#line">Line</a></li>
+                <li><a href="#table">Table</a></li>
+            </ul>    
+
+            <label class="btn" for="switch-theme" id="switch-btn">&#127763; Theme switch</label>
+            <div class="breadcrumbs">
+                <a href="#">Home</a>
+                <a href="#">Style Guide</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+       <div class="container flex">            
+            <div class="article">
+
+                <section class="part">
+                    <a href="https://www.google.com/" target="_blank">Links look like this</a>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <a href="#" class="underline">Or links look like this.</a> Sint quasi quae itaque. Maxime, et similique totam corrupti dolorem voluptas debitis.</p>
+                </section>
+                <section class="part" id="headers">
+                    <h1>Headers different weight</h1>
+                    <h2>Headers different weight</h2>
+                    <h3>Headers different weight</h3>
+                    <h4>Headers different weight</h4>
+                    <h5>Headers different weight</h5>
+                    <h6>Headers different weight</h6>
+                </section>
+                <section class="part" id="texts">
+                    <p class="select">Selected text</p>
+                    <p class="underline">Underline text</p>
+                    <p class="trough">Trough text</p>
+                    <p class="bold">Bold text</p>
+                    <p><span class="italic">Cursive text</span> or <cite>Here cite</cite></p>
+
+                </section>
+                <section class="part" id="lists">
+                    <ul>
+                        <li>List item 1</li>
+                        <li>List item 2</li>
+                        <li>List item 3</li>
+                        <li>List item 4</li>
+                        <li>List item 5</li>
+                        <li>List item 6</li>
+                    </ul>
+
+                    <ol>
+                        <li>List item 1</li>
+                        <li>List item 2</li>
+                        <li>List item 3</li>
+                        <li>List item 4</li>
+                        <li>List item 5</li>
+                        <li>List item 6</li>
+                    </ol>
+
+                    <dl>
+                        <dt>Lorem 1</dt>
+                        <dd>Lorem ipsum dolor sit amet consectetur.</dd>
+                        <dt>Lorem 2</dt>
+                        <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore voluptates, aliquid sapiente adipisci reprehenderit doloremque, nemo in beatae placeat saepe maxime. Placeat voluptate unde repudiandae error quasi eos cupiditate adipisci.</dd>
+                    </dl>
+
+                    <ul>
+                        <li>First task</li>
+                        <li>Second task
+                            <ol>
+                                <li>Mini task</li>
+                                <li>Mini task</li>
+                                <li>Mini task</li>
+                                <li>Mini task</li>
+                                <li>Mini task</li>
+                                <li>Mini task</li>
+                            </ol>
+                        </li>
+                        <li>Third task</li>
+                        <li>Fourth task</li>
+                        <li>Fiveth task</li>
+                    </ul>
+                </section>
+
+                <section class="part" id="code">
+                    <p>Code example here</p>
+
+                    <pre><code>
+var myImage = document.querySelector('img');
+
+myImage.onclick = function() {
+    var mySrc = myImage.getAttribute('src');
+    if(mySrc === 'images/firefox-icon.png') {
+        myImage.setAttribute ('src','images/firefox2.png');
+    } else {
+        myImage.setAttribute ('src','images/firefox-icon.png');
+    }
+}
+                    </code></pre>
+                </section>
+                <section class="part">
+                    <span class="white-space">
+                        Text 
+                            that
+                                saves
+                                    spaces
+                    </span>
+                    <p>or</p>
+                    <pre>
+                        Text 
+                            that
+                                saves
+                                    spaces
+                    </pre>
+                </section>
+                <section class="part" id="line">
+                    Just horizontal line below
+                    <hr>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing 
+                    elit. Illum, eaque recusandae magnam quibusdam rem unde?
+                </section>
+                <section class="part"  id="form" >
+                    <form action="#" class="flex">
+                        <label for="login">Login</label>
+                        <input type="text" name="login" id="login" placeholder="enter your login here" required>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" placeholder="enter your passwprd here" required>
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="enter your e-mail here" required>
+                        <input type="checkbox" name="agreement" id="agreement" required>
+                        <label for="agreement">I agree with your policy</label>
+                        <div class="buttons flex">
+                            <input class="btn" type="submit" value="CREATE">                    
+                            <input class="btn" type="submit" value="SIGN IN">
+                            <input class="btn" type="reset" value="CANCEL">      
+                        </div>
+                    </form>
+                </section>
+
+                <section class="part" id="table">
+                        <table>
+                            <tr>
+                                <td class="pointer">Pointer</td>
+                                <td class="text">Text</td>
+                                <td class="progress">Progress</td>
+                                <td class="wait">Wait</td>
+                            </tr>
+                            <tr>
+                                <td class="grab">Grab</td>
+                                <td class="zoom-in">Zoom-in</td>
+                                <td class="zoom-out">Zoom-out</td>
+                                <td class="none">None</td>
+                            </tr>
+                        </table>
+                </section>
+                
+            </div>
+
+            <aside>
+                <section class="aside">
+                    <form action="/" class="flex">
+                        <input type="text" name="search" id="search" placeholder="Search">
+                        <input class="btn" type="submit" value="SEARCH">
+                    </form>
+                </section>
+                <section class="aside">
+                    <div class="about">
+                        <h3>not about me</h3>
+                        <img src="./img/unnamed.png" alt="girl photo">
+                        <h4>
+                            Natalia Lopson – Fashion Blogger
+                        </h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                             Aperiam ad dolor magni neque quo? A dolorum, ullam porro unde harum iure
+                             accusamus nobis deserunt molestias assumenda! Assumenda accusantium rerum qui!</p>
+                    </div>
+                </section>
+            </aside>
+       </div>
+    </main>
+    <footer>
+            <div class="container footer flex">
+                <div class="links">
+                    <h4>If you need more:</h4>
+                    <ul>
+                        <li><a href="#">Other link 1</a></li>
+                        <li><a href="#">Other link 2</a></li>
+                        <li><a href="#">Other link 4</a></li>
+                        <li><a href="#">Other link 5</a></li>
+                        <li><a href="#">Other link 6</a></li>
+                        <li><a href="#">Other link 7</a></li>
+                        <li><a href="#">Other link 8</a></li>
+                        <li><a href="#">Other link 9</a></li>
+                    </ul>
+                </div>
+                <div class="contact">
+                    <h4>Contact us</h4>
+                    <ul>
+                        <li><a href="tel:(123)4567890">&#9742; +380(11)456-7890</a></li>
+                        <li><a href="mailto:example@mail.com">&#9993; example@mail.com</a></li>
+                    </ul>
+                    
+                </div>
+                <hr>
+                <p>All rights reserved &#169; 2022. 
+                    Theme example <a target="_blank" href="https://themegrilldemos.com/cenote/style-guide/">Theme grill</a></p>
+                
+            </div>
+    </footer>
+</body>
+</html>
